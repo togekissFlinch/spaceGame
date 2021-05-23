@@ -41,6 +41,10 @@ def faire_exploser(objet):
         objet.shape("sprite/explosion" + str(i + 2) + ".gif")
         time.sleep(0.1)
     objet.hideturtle()
+def animation(objet,image,nombre):
+    for i in range(nombre):
+        objet.shape("sprite/" + image + str(i + 2) + ".gif")
+        time.sleep(0.1)
 #player
 player = t.Turtle()
 creer(player,0,50,"sprite/player.gif")
@@ -70,11 +74,7 @@ for i in range(10):
     player.y -= 10
     player.sety(player.y)
 for i in range(33):
-    enemy.shape("sprite/alien.gif")
-    time.sleep(0.1)
-    enemy.shape("sprite/alien2.gif")
-    time.sleep(0.1)
-    enemy.shape("sprite/alien3.gif")
+    animation(enemy,"alien",2)
     player.y += 10
     player.sety(player.y)
 for i in range(10):
@@ -104,4 +104,4 @@ t.listen()
 t.onkey(right,"Right")
 t.onkey(left,"Left")
 while True:
-    pass
+    animation(fire,"fire",3)
