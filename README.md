@@ -16,5 +16,20 @@ you finish all the levels
 
 and you kill the final boss
 
+## Install package
+
+On arch
+
+```
+sudo pacman -S tk
+```
+
+On Ubuntu
+
+```
+sudo apt-get install tk
+```
+
 ## Have fun !!!!!!
+
 
