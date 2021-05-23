@@ -8,13 +8,12 @@ This is a game I made using Python and turtle.
 python3 game.py
 ```
 
-## How to play SpaceGame ?
+## What is SpaceGame ?
 
-shoot alien have fun
+SpaceGame is a game where you shoot aliens
 
-finish all levels
+you finish all the levels
 
-and kill the final boss
-
+and you kill the final boss
 
 
