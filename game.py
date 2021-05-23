@@ -5,6 +5,7 @@ import time
 window = t.Screen()
 window.bgpic("sprite/background.gif")
 window.title("A Game Made By Boris")
+t.register_shape("sprite/spaceship.gif")
 t.register_shape("sprite/player.gif")
 t.register_shape("sprite/player2.gif")
 t.register_shape("sprite/player3.gif")
@@ -95,13 +96,11 @@ def right():
     player.shape("sprite/player.gif")
     player.setx(player.x)
     fire.setx(player.x)
-    animation(fire,"fire",3)
 def left():
     player.x -= 10
     player.shape("sprite/player2.gif")
     player.setx(player.x)
     fire.setx(player.x)
-    animation(fire,"fire",3)
 t.listen()
 t.onkey(right,"Right")
 t.onkey(left,"Left")
