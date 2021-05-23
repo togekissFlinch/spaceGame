@@ -1,5 +1,7 @@
+#importer les packages
 import turtle as t
 import time
+#fenêtre
 window = t.Screen()
 window.bgpic("sprite/background.gif")
 window.title("A Game Made By Boris")
@@ -42,7 +44,6 @@ def faire_exploser(objet):
 #player
 player = t.Turtle()
 creer(player,0,50,"sprite/player.gif")
-print(player.x)
 #fire
 fire = t.Turtle()
 creer(fire,0,-40,"sprite/fire1.gif")
@@ -103,19 +104,4 @@ t.listen()
 t.onkey(right,"Right")
 t.onkey(left,"Left")
 while True:
-    enemy.shape("sprite/alien.gif")
-    time.sleep(0.1)
-    enemy.shape("sprite/alien2.gif")
-    time.sleep(0.1)
-    enemy.shape("sprite/alien3.gif")
-    time.sleep(0.1)
-    fire.shape("sprite/fire1.gif")
-    time.sleep(0.1)
-    fire.shape("sprite/fire2.gif")
-    time.sleep(0.1)
-    fire.shape("sprite/fire3.gif")
-    time.sleep(0.1)
-    fire.shape("sprite/fire4.gif")
-    time.sleep(0.1)
-
-
+    pass
