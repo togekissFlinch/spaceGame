@@ -25,35 +25,31 @@ t.register_shape("sprite/explosion8.gif")
 t.register_shape("sprite/explosion9.gif")
 t.register_shape("sprite/explosion10.gif")
 t.register_shape("sprite/rocket.gif")
+def creer(objet,objet_x,objet_y,image):
+    objet.x = objet_x
+    objet.y = objet_y
+    objet.penup()
+    objet.hideturtle()
+    objet.shape(image)
+    objet.setposition(objet.x,objet.y)
+    objet.showturtle()
+#player
 player = t.Turtle()
-player.shape("sprite/player.gif")
-player_is = "ALIVE"
-player.x = 0
-player.y = 0
-player.penup()
-player.setposition(0,50)
+creer(player,0,50,"sprite/player.gif")
+print(player.x)
+#fire
 fire = t.Turtle()
-fire.shape("sprite/fire1.gif")
-fire.penup()
-fire.setposition(0,-40)
+creer(fire,0,-40,"sprite/fire1.gif")
+#rocket
 rocket = t.Turtle()
-rocket.hideturtle()
-rocket.shape("sprite/rocket.gif")
-rocket.penup()
-rocket.setposition(200,0)
+creer(rocket,600,0,"sprite/rocket.gif")
+#alien
 enemy = t.Turtle()
-enemy.hideturtle()
-enemy.shape("sprite/alien.gif")
-enemy.penup()
-enemy.setposition(0,350)
-enemy.showturtle()
+creer(enemy,0,350,"sprite/alien.gif")
+#bomb
 bomb = t.Turtle()
+creer(bomb,enemy.xcor(),enemy.ycor(),"sprite/bomb.gif")
 bomb.hideturtle()
-bomb.penup()
-bomb.x = enemy.xcor()
-bomb.y = enemy.ycor()
-bomb.shape("sprite/bomb.gif")
-bomb.setposition(enemy.xcor(),enemy.ycor())
 def jeter_bombe():
     bomb.showturtle()
     bomb.setposition(player.x,player.y)
@@ -88,7 +84,7 @@ fire.hideturtle()
 time.sleep(0.1)
 player.shape("sprite/player3.gif")
 for i in range(10):
-    player.y -= 1
+    player.y -= 10
     player.sety(player.y)
 enemy.setx(player.x)
 for i in range(10):
