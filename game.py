@@ -95,13 +95,14 @@ def right():
     player.shape("sprite/player.gif")
     player.setx(player.x)
     fire.setx(player.x)
+    animation(fire,"fire",3)
 def left():
     player.x -= 10
     player.shape("sprite/player2.gif")
     player.setx(player.x)
     fire.setx(player.x)
+    animation(fire,"fire",3)
 t.listen()
 t.onkey(right,"Right")
 t.onkey(left,"Left")
-while True:
-    animation(fire,"fire",3)
+t.mainloop()
